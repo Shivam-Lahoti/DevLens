@@ -17,7 +17,7 @@ router= APIRouter()
 async def health_check():
     return HealthResponse(status="ok", version="1.0.0")
 
-@router.post("/explain_page", response_model= ExplainPageResponse)
+@router.post("/explain-page", response_model= ExplainPageResponse)
 async def explain_page(request: ExplainPageRequest):
     try:
         content= request.content
